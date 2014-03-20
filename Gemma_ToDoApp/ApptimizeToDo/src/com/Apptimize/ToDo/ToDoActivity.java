@@ -4,7 +4,6 @@ import java.util.ArrayList;
 
 import android.os.Bundle;
 import android.app.Activity;
-import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.widget.AdapterView;
@@ -12,9 +11,9 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.AdapterView.OnItemLongClickListener;
-
-import com.apptimize.Apptimize;
+import com.apptimize.Apptimize; 
 import com.apptimize.ApptimizeExperiment;
+
 
 
 public class ToDoActivity extends Activity {
@@ -27,7 +26,8 @@ public class ToDoActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_todo);
 		
-//		 Apptimize.setup(this, "XXXxxXXxxxXXXxxXXxxxXXXxxXXxxxX");    // Copy/Paste Your App Key Code Snippet Here !	
+		Apptimize.setup(this, "DXoTt87JEtCf1O27UFEoQtfbMUYj-Y4");
+		
 		
 		//Sets up ListView with items
 		lvItems = (ListView) findViewById(R.id.lvItems);
@@ -39,29 +39,7 @@ public class ToDoActivity extends Activity {
 
 		items.add("First Item");
 		items.add("BaseLine");
-		
-//		Apptimize.runExperiment("new android a/b test", new ApptimizeExperiment() {			
-//		    @Override
-//		    public void baseline() {
-//		       // Variant: baseline
-//		    	items.add("First Item");
-//				items.add("BaseLine");
-////				Apptimize.goalAchieved("button click");
-//				Log.i("gg","**baseline**");
-//		    }
-//
-//		    @SuppressWarnings("unused")
-//		    public void variation1() {
-//		       // Variant: var 1
-//		    	items.add("First Item");
-//				items.add("Variant 1");
-//				Apptimize.goalAchieved("FACEBOOK");
-//				Apptimize.goalAchieved("button click");
-//				Log.i("gg","**var 1** ");
-//		    }
-//		});
-		
-		
+			
 			
 	}
 
@@ -70,7 +48,6 @@ public class ToDoActivity extends Activity {
 		EditText edNewItem = (EditText) findViewById(R.id.edNewItem);
 		itemsAdapter.add(edNewItem.getText().toString());;
 		edNewItem.setText("");	
-//		Apptimize.goalAchieved("button click");
 	}
 	
 	private void setupListViewListener(){
