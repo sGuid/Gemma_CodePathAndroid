@@ -1,0 +1,66 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.gemtipcalculator2.MainActivity"
+    tools:ignore="MergeRootFrame" >
+
+    <EditText
+        android:id="@+id/edBillAmt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:hint="Enter your bill" >
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/btnTip10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/edBillAmt"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="30dp"
+        android:onClick="buttonTip10"
+        android:text="10%" />
+
+    <Button
+        android:id="@+id/btnTip15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btnTip10"
+        android:layout_below="@+id/btnTip10"
+        android:layout_marginTop="20dp"
+        android:onClick="buttonTip15"
+        android:text="15%" />
+
+    <Button
+        android:id="@+id/btnTip20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btnTip15"
+        android:layout_below="@+id/btnTip15"
+        android:layout_marginTop="20dp"
+        android:onClick="buttonTip20"
+        android:text="20%" />
+
+    <EditText
+        android:id="@+id/edYourTipIs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/btnTip20"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:hint="Your tip is: " />
+
+</RelativeLayout>
